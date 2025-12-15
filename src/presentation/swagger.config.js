@@ -69,6 +69,73 @@ const swaggerDefinition = {
             example: ['user']
           }
         }
+      },
+      Coupon: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string',
+            example: '60c72b2f9b1e8a001f8e4caa'
+          },
+          code: {
+            type: 'string',
+            example: 'VERANO2025'
+          },
+          discountType: {
+            type: 'string',
+            enum: ['PERCENTAGE', 'FIXED'],
+            example: 'PERCENTAGE'
+          },
+          value: {
+            type: 'number',
+            example: 10
+          },
+          expirationDate: {
+            type: 'string',
+            format: 'date-time',
+            example: '2025-12-31T23:59:59.000Z'
+          },
+          minOrderAmount: {
+            type: 'number',
+            example: 50
+          },
+          isActive: {
+            type: 'boolean',
+            example: true
+          }
+        }
+      },
+      CouponInput: {
+        type: 'object',
+        required: ['code', 'discountType', 'value', 'expirationDate'],
+        properties: {
+          code: {
+            type: 'string',
+            example: 'VERANO2025'
+          },
+          discountType: {
+            type: 'string',
+            enum: ['PERCENTAGE', 'FIXED'],
+            example: 'PERCENTAGE'
+          },
+          value: {
+            type: 'number',
+            example: 10
+          },
+          expirationDate: {
+            type: 'string',
+            format: 'date-time',
+            example: '2025-12-31T23:59:59.000Z'
+          },
+          minOrderAmount: {
+            type: 'number',
+            example: 50
+          },
+          isActive: {
+            type: 'boolean',
+            example: true
+          }
+        }
       }
     }
   },
