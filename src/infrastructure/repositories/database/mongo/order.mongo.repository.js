@@ -1,6 +1,6 @@
-const OrderRepository = require('../../domain/repositories/order.repository.interface');
-const OrderModel = require('./database/mongo/models/order.model');
-const Order = require('../../domain/entities/order.entity');
+const OrderRepository = require('../../../../domain/repositories/order.repository.interface');
+const OrderModel = require('./models/order.model');
+const Order = require('../../../../domain/entities/order.entity');
 
 class OrderMongoRepository extends OrderRepository {
   async getAll() {
